@@ -79,7 +79,6 @@ public class CartService {
                 existingItem.setQuantity(quantity);
             } else {
                 cart.getCartItems().remove(existingItem);
-                //cart.removeCartItem(existingItem);
             }
         } else if (quantity > 0) {
             CartItem cartItem = new CartItem();

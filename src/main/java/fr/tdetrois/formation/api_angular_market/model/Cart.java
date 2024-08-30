@@ -30,11 +30,6 @@ public class Cart {
     @OneToMany(mappedBy = "cart", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<CartItem> cartItems;
 
-    public void removeCartItem(CartItem cartItem) {
-        cartItem.setCart(null);
-        cartItems.remove(cartItem);
-    }
-
     /**
      * La suppression de Cart (qui n'est possible que lorsque la liste cartItems est vide)
      * nécessite que la référence au Cart dans la classe User soit supprimée
